@@ -1,3 +1,5 @@
+# 打印a01b01到a99b99
+
 import os
 import concurrent.futures
 
@@ -10,8 +12,8 @@ def run_cmd(cmd):
     os.system(cmd)
 
 
-for i in range(1, 100):
-    commands.append(f"echo a{i}b{i}")
+for s in [str(i).rjust(2, "0") for i in range(1, 100)]:
+    commands.append(f"echo a{s}b{s}")
 
 with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as executor:
     executor.map(run_cmd, commands)
