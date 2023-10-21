@@ -3,15 +3,15 @@
 import os
 import time
 
-axxbxx = [str(f"a{i}b{i}").rjust(2, "0") for i in range(1, 100)]
+axbx = [str(f"a{i}b{i}").rjust(4, "0") for i in range(1, 10000)]
 
 t5 = time.time()
-for s in axxbxx:
+for s in axbx:
     print(f"{s}")
 t6 = time.time()
 
 t7 = time.time()
-for s in axxbxx:
+for s in axbx:
     os.system(f"echo {s}")
 t8 = time.time()
 
