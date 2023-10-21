@@ -34,18 +34,5 @@ with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as executor:
     executor.map(run_cmd_echo, commands_echo)
 t4 = time.time()
 
-t5 = time.time()
-for s in axxbxx:
-    print(f"{s}")
-t6 = time.time()
-
-t7 = time.time()
-for s in axxbxx:
-    os.system(f"echo {s}")
-t8 = time.time()
-
-
 print(f"thread pool print {(t2 - t1) * 1000:.2f} ms")
-print(f"thread pool {(t4 - t3) * 1000:.2f} ms")
-print(f"for print {(t6 - t5) * 1000:.2f} ms")
-print(f"for echo {(t8 - t7) * 1000:.2f} ms")
+print(f"thread pool echo {(t4 - t3) * 1000:.2f} ms")
