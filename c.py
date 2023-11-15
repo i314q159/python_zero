@@ -1,2 +1,3 @@
-# 提取url的时候很有用
-# print("".join("https://a/b/c".split("/")))
+import six
+
+print(f"Python{six.PY3 + 2}")
