@@ -1,5 +1,3 @@
-# 打印a01b01到a99b99
-
 import os
 import time
 import concurrent.futures
